@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
+import Button from './ui/Button/Button'
 
 // import { TransactionContext } from '../context/TransactionContext'
 // import { shortenAddress } from '../utils/shortenAddress'
@@ -45,18 +46,19 @@ const Welcome = () => {
           <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
             Send Crypto <br /> across the world
           </h1>
-          <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
+          <p className="text-left mt-5 text-white mb-8 font-light md:w-9/12 w-11/12 text-base">
             Explore the crypto world. Buy and sell cryptocurrencies easily on
             Krypto.
           </p>
+          <Button className="flex flex-row justify-center items-center " />
 
-          <button
+          {/* <button
             type="button"
             className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
           >
             <AiFillPlayCircle className="text-white mr-2" />
             <p className="text-white text-base font-semibold">Connect Wallet</p>
-          </button>
+          </button> */}
 
           <div className="grid sm:grid-cols-2 grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
