@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import Loader from './Loader'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
@@ -41,8 +42,8 @@ const Welcome = () => {
 
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex mf:flex-row flex-row items-start justify-between gap-[300px] md:p-20 py-12 px-4">
-        <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
+      <div className="flex md:flex-row flex-col items-start justify-between gap-[300px] md:p-20 py-12 px-4 sm:flex-col">
+        <div className="flex flex-1 justify-start items-start flex-col md:mr-10">
           <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
             Send Crypto <br /> across the world
           </h1>
@@ -50,7 +51,7 @@ const Welcome = () => {
             Explore the crypto world. Buy and sell cryptocurrencies easily on
             Krypto.
           </p>
-          <Button className="flex flex-row justify-center items-center " />
+          <Button/>
 
           {/* <button
             type="button"
@@ -103,13 +104,17 @@ const Welcome = () => {
 
             <div className="h-[1px] w-full bg-gray-400 my-2" />
 
-            <button
-              type="button"
-              onClick={handleSubmit}
-              className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
-            >
-              Send now
-            </button>
+            {false ? (
+              <Loader />
+            ) : (
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
+              >
+                Send now
+              </button>
+            )}
           </div>
         </div>
       </div>
