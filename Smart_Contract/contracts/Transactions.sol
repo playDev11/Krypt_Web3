@@ -1,4 +1,4 @@
-// SPDX license identifier: MIT
+// SPDX license identifier: UNLICENSED
 
 pragma solidity ^0.8.0;
 
@@ -20,7 +20,8 @@ contract Transactions {
 
     TransferStruct[] transactions;
 
-    function addToBlockChain() public {
+    function addToBlockChain(address payable receiver, uint amount,) public {
+        transactionCount +=1;
     
     }
 
@@ -30,6 +31,9 @@ contract Transactions {
     }
     function getTransactionsCount() public view returns (uint256){
         // return transactionsCount;
+    }
+    function getTransactionsResult() public view returns (){
+
     }
 
 }
