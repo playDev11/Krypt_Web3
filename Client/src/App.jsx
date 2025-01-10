@@ -1,6 +1,7 @@
 import './App.css'
 import Footer from './Component/Footer'
 import Navbar from './Component/Navbar'
+import Receipt from './Component/reciept'
 import Services from './Component/Services'
 import Transactions from './Component/Transactions'
 import Welcome from './Component/Welcome'
@@ -13,6 +14,7 @@ const App = ()=>{
         <Welcome/>
       </div>
       <Services/>
+      {/* <Receipt/> */}
       <Transactions/>
       <Footer/>
       
